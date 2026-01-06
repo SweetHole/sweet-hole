@@ -6,30 +6,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
-
-    <h1 style="color:#b000ff; letter-spacing:4px;">SWEET HOLE</h1>
-
-    <p style="max-width:500px; color:#aaa;">
-        Fanowskie tłumaczenia BL.<br>
-        Tylko dla znajomych.<br><br>
-        Nie do użytku komercyjnego.
-    </p>
-
-    <a href="home.html" style="
-        margin-top:30px;
-        padding:12px 30px;
-        border:1px solid #b000ff;
-        color:#b000ff;
-        text-decoration:none;
-        letter-spacing:2px;
-    ">
-        ENTER SWEET HOLE
-    </a>
-
+<div id="login">
+  <h1 style="color:#b000ff; letter-spacing:4px;">SWEET HOLE</h1>
+  <p>Fanowskie tłumaczenia BL • Tylko dla znajomych</p>
+  <input type="password" id="password" placeholder="Wpisz hasło" style="padding:10px; margin-top:20px; border:1px solid #b000ff; background:#111; color:#fff;">
+  <br>
+  <button onclick="checkPassword()" style="margin-top:20px; padding:10px 20px; border:1px solid #b000ff; color:#b000ff; background:transparent; cursor:pointer;">ENTER</button>
+  <p id="wrong" style="color:red; margin-top:10px; display:none;">Złe hasło!</p>
 </div>
+
+<script>
+function checkPassword() {
+  const input = document.getElementById('password').value;
+  const correct = "slodkadziura";
+  if(input === correct) {
+    window.location.href = "home.html";
+  } else {
+    document.getElementById('wrong').style.display = "block";
+  }
+}
+</script>
 
 </body>
 
 </html>
+
