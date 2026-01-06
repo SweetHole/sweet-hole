@@ -5,20 +5,23 @@
     <title>Sweet Hole</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div id="login">
-  <h1 style="color:#b000ff; letter-spacing:4px;">SWEET HOLE</h1>
-  <p>Fanowskie tłumaczenia BL • Tylko dla znajomych</p>
-  <input type="password" id="password" placeholder="Wpisz hasło" style="padding:10px; margin-top:20px; border:1px solid #b000ff; background:#111; color:#fff;">
+<body style="margin:0; padding:0; background:#0b0b0b; color:#e6e6e6; font-family:Arial, sans-serif; display:flex; justify-content:center; align-items:center; height:100vh;">
+
+<div id="login" style="text-align:center;">
+  <h1 style="color:#b000ff; letter-spacing:4px; font-size:48px;">SWEET HOLE</h1>
+  <p style="margin-top:10px; color:#aaa;">Fanowskie tłumaczenia BL • Tylko dla znajomych</p>
+  <input type="password" id="password" placeholder="Wpisz hasło" 
+         style="padding:10px; margin-top:20px; border:1px solid #b000ff; background:#111; color:#fff; width:200px; font-size:16px;">
   <br>
-  <button onclick="checkPassword()" style="margin-top:20px; padding:10px 20px; border:1px solid #b000ff; color:#b000ff; background:transparent; cursor:pointer;">ENTER</button>
+  <button onclick="checkPassword()" 
+          style="margin-top:20px; padding:10px 20px; border:1px solid #b000ff; color:#b000ff; background:transparent; cursor:pointer; font-size:16px;">ENTER</button>
   <p id="wrong" style="color:red; margin-top:10px; display:none;">Złe hasło!</p>
 </div>
 
 <script>
 function checkPassword() {
   const input = document.getElementById('password').value;
-  const correct = "slodkadziura";
+  const correct = "slodkadziura"; 
   if(input === correct) {
     window.location.href = "home.html";
   } else {
@@ -28,6 +31,4 @@ function checkPassword() {
 </script>
 
 </body>
-
 </html>
-
